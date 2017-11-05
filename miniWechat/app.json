@@ -1,0 +1,34 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/todo",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": " 随想小记",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#222",
+    "backgroundColor": "#f8f9fb",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "index",
+        "iconPath": "img/todos.png",
+        "selectedIconPath": "img/todos-active.png"
+      },
+      {
+        "pagePath": "pages/index/todo",
+        "text": "todo",
+        "iconPath": "img/todos.png",
+        "selectedIconPath": "img/todos-active.png"
+      }
+    ]
+  }
+
+}
