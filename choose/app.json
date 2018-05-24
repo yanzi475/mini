@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/todo",
+    "pages/index/todo2",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "电机选型手册",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#222",
+    "backgroundColor": "#f8f9fb",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "手册介绍",
+        "iconPath": "img/todos.png",
+        "selectedIconPath": "img/todos-active.png"
+      },
+      {
+        "pagePath": "pages/index/todo",
+        "text": "三角运动",
+        "iconPath": "img/todos.png",
+        "selectedIconPath": "img/todos-active.png"
+      },
+      {
+        "pagePath": "pages/index/todo2",
+        "text": "梯形运动",
+        "iconPath": "img/todos.png",
+        "selectedIconPath": "img/todos-active.png"
+      }
+    ]
+  }
+
+}
