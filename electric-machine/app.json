@@ -2,7 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/index/todo",
-    "pages/index/todo2",
+    "pages/index/trapezoid",
     "pages/logs/logs"
   ],
   "window":{
@@ -30,7 +30,7 @@
         "selectedIconPath": "img/todos-active.png"
       },
       {
-        "pagePath": "pages/index/todo2",
+        "pagePath": "pages/index/trapezoid",
         "text": "梯形运动",
         "iconPath": "img/todos.png",
         "selectedIconPath": "img/todos-active.png"

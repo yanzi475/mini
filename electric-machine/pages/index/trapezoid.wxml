@@ -1,0 +1,144 @@
+<view class="pack-desc detail-text">
+    <view class="btn ">
+         <button class="btn-reset blue" bindtap="clickReset">标准规格</button>
+         <button class="btn-reset blue" bindtap="clickClean">一键清除</button>
+         <button class="btn-reset blue" bindtap="clickCustom">定制计算</button>
+    </view>
+    <view class="suppliers-desc detail-text">
+        <view class="suppliers-desc-list">
+            <text class="title">行程(mm)：</text>
+            <input class="new-todo" value="{{ distance  }}" placeholder="请输入行程"  bindinput="inputChangeDistance" />
+        </view>
+         <view class="suppliers-desc-list">
+            <text class="title">加速度(G) ：</text>
+            <input class="new-todo" value="{{ acceleration  }}" placeholder="请输入加速度"  bindinput="inputChangeAcceleration" />
+         </view>
+         <view class="suppliers-desc-list">
+              <text class="title">最大速度(m/s) ：</text>
+               <input class="new-todo" value="{{ maxAcc  }}" placeholder="请输入最大速度"  bindinput="inputChangeMaxAcc" />
+         </view>
+
+         <view class="suppliers-desc-list">
+             <text class="title">匀速速度(m/s) ：</text>
+             <input class="new-todo" value="{{ evenAcc  }}" placeholder="请输入匀速速度"  bindinput="inputChangeEvenAcc" />
+         </view>
+         <view class="suppliers-desc-list">
+             <text class="title">减速度(G) ：</text>
+             <input class="new-todo" value="{{ deceleration  }}" placeholder="请输入"  bindinput="inputChangedeceleration" />
+         </view>
+        <view class="suppliers-desc-list">
+                <text class="title">动子重量(KG)：</text>
+                <input class="new-todo" value="{{ weight }}" placeholder="请输入动子重量" bindinput="inputChangeWeight" />
+        </view>
+        <view class="suppliers-desc-list">
+          <text class="title">负载(KG) ：</text>
+          <input class="new-todo" value="{{ fuzai  }}" placeholder="请输入"  bindinput="inputChangefuzai" />
+
+        </view>
+         <view class="suppliers-desc-list">
+           <text class="title">电磁吸力(KN) ：</text>
+           <input class="new-todo" value="{{ elecWeight  }}" placeholder="请输入"  bindinput="inputChangeelecWeight" />
+
+         </view>
+         <view class="suppliers-desc-list">
+            <text class="title">摩擦系数：</text>
+            <input class="new-todo" value="{{ forceLevel  }}" placeholder="请输入"  bindinput="inputChangeforceLevel" />
+
+         </view>
+         <view class="suppliers-desc-list mt56">
+                   <text class="title">安全系数：</text>
+                   <input class="new-todo" value="{{ saveLevel }}" placeholder="请输入安全系数" bindinput="inputChangeSaveLevel" />
+         </view>
+
+         <view class="suppliers-desc-list">
+             <text class="title">滑块摩擦力(N)：</text>
+             <input class="new-todo" value="{{ forceHua  }}" placeholder="请输入"  bindinput="inputChangeforceHua" />
+
+         </view>
+         <view class="suppliers-desc-list">
+              <text class="title">防尘罩阻力(N)：</text>
+              <input class="new-todo" value="{{ forceChen  }}" placeholder="请输入"  bindinput="inputChangeforceChen" />
+
+          </view>
+          <view class="suppliers-desc-list">
+               <text class="title">拖链阻力(N)：</text>
+               <input class="new-todo" value="{{ forceLian  }}" placeholder="请输入行程"  bindinput="inputChangeforceLian" />
+
+          </view>
+          <view class="suppliers-desc-list">
+               <text class="title">停顿时间(ms)：</text>
+               <input class="new-todo" value="{{ parseTime }}" placeholder="请输入停顿时间" bindinput="inputChangeParseTime" />
+          </view>
+          <view class="suppliers-desc-list">
+                      <text class="title">保持力(N)：</text>
+                      <input class="new-todo" value="{{ saveForce }}" placeholder="请输入保持力" bindinput="inputChangeSaveForce" />
+          </view>
+
+
+
+         <view class="suppliers-desc-list">
+              <text class="title">加速时间(m/s) ：</text>
+              <text class="content blue">{{accTime}}</text>
+         </view>
+         <view class="suppliers-desc-list">
+               <text class="title">加速位移(mm) ：</text>
+               <text class="content blue">{{accDis}}</text>
+         </view>
+         <view class="suppliers-desc-list">
+               <text class="title">匀速时间(m/s) ：</text>
+               <text class="content blue">{{aveTime}}</text>
+          </view>
+          <view class="suppliers-desc-list">
+                <text class="title">匀速位移(mm) ：</text>
+                <text class="content blue">{{aveDis}}</text>
+          </view>
+          <view class="suppliers-desc-list">
+                <text class="title">减速时间(m/s) ：</text>
+                <text class="content blue">{{delTime}}</text>
+           </view>
+           <view class="suppliers-desc-list">
+                 <text class="title">减速位移(mm) ：</text>
+                 <text class="content blue">{{delDis}}</text>
+           </view>
+
+         <view class="suppliers-desc-list">
+            <text class="title">匀速时总摩擦力(N) ：</text>
+            <text class="content blue">{{forceMax}}</text>
+         </view>
+         <view class="suppliers-desc-list">
+             <text class="title">运动总时间(s) ：</text>
+             <text class="content blue">{{sumTime}}</text>
+         </view>
+
+         <view class="suppliers-desc-list">
+           <text class="title">加速推力(N)：</text>
+           <text class="content blue">{{speedForce}}</text>
+         </view>
+         <view class="suppliers-desc-list">
+           <text class="title">减速推力(N)：</text>
+           <text class="content blue">{{downForce}}</text>
+         </view>
+         <view class="suppliers-desc-list mt56">
+           <text class="title"> 最大推力(N)：</text>
+           <text class="content blue">{{maxForce}}</text>
+         </view>
+
+         <view class="suppliers-desc-list">
+           <text class="title">持续推力1(N)：</text>
+           <text class="content blue">{{durForceOne}}</text>
+         </view>
+
+
+         <view class="suppliers-desc-list mt56">
+           <text class="title"> 峰值推力(N)：</text>
+           <text class="content blue">{{topForce}}</text>
+         </view>
+
+         <view class="suppliers-desc-list">
+           <text class="title">持续推力2(N)：</text>
+           <text class="content blue">{{durForceTwo}}</text>
+         </view>
+
+
+    </view>
+</view>

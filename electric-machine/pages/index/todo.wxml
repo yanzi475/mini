@@ -1,0 +1,71 @@
+<view class="pack-desc detail-text">
+    <view class="btn ">
+         <button class="btn-reset blue" bindtap="clickReset">标准规格</button>
+         <button class="btn-reset blue" bindtap="clickClean">一键清除</button>
+         <button class="btn-reset blue" bindtap="clickCustom">定制计算</button>
+    </view>
+    <view class="suppliers-desc detail-text">
+        <view class="suppliers-desc-list">
+              <text class="title">行程(mm)：</text>
+              <input class="new-todo" value="{{ distance  }}" placeholder="请输入行程" auto-focus bindinput="inputChangeDistance" />
+        </view>
+        <view class="suppliers-desc-list">
+                       <text class="title">时间(ms)：</text>
+                       <input class="new-todo" value="{{ time }}" placeholder="请输入时间"  bindinput="inputChangeTime" />
+        </view>
+
+        <view class="suppliers-desc-list">
+                        <text class="title">负载(kg)：</text>
+                        <input class="new-todo" value="{{ fuzai }}" placeholder="请输入负载" bindinput="inputChangeFuzai" />
+
+        </view>
+        <view class="suppliers-desc-list">
+                <text class="title">动子重量(kg)：</text>
+                <input class="new-todo" value="{{ weight }}" placeholder="请输入动子重量" bindinput="inputChangeWeight" />
+        </view>
+        <view class="suppliers-desc-list">
+                         <text class="title">停顿时间(ms)：</text>
+                         <input class="new-todo" value="{{ parseTime }}" placeholder="请输入停顿时间" bindinput="inputChangeParseTime" />
+        </view>
+        <view class="suppliers-desc-list">
+                    <text class="title">保持力(N)：</text>
+                    <input class="new-todo" value="{{ saveForce }}" placeholder="请输入保持力" bindinput="inputChangeSaveForce" />
+        </view>
+        <view class="suppliers-desc-list">
+                          <text class="title"> 摩擦力(N)：</text>
+                          <input class="new-todo" value="{{ force }}" placeholder="请输入摩擦力" bindinput="inputChangeForce" />
+        </view>
+        <view class="suppliers-desc-list mt56">
+                  <text class="title">安全系数：</text>
+                  <input class="new-todo" value="{{ saveLevel }}" placeholder="请输入安全系数" bindinput="inputChangeSaveLevel" />
+         </view>
+
+        <view class="suppliers-desc-list">
+          <text class="title">加速度 ：</text>
+          <text class="content blue">{{acceleration}}</text>
+        </view>
+
+        <view class="suppliers-desc-list">
+          <text class="title">速度：</text>
+          <text class="content blue" >{{speed}}</text>
+        </view>
+        <view class="suppliers-desc-list">
+          <text class="title">加速推力：</text>
+          <text class="content blue">{{speedForce}}</text>
+        </view>
+        <view class="suppliers-desc-list">
+          <text class="title">减速推力：</text>
+          <text class="content blue">{{downForce}}</text>
+        </view>
+        <view class="suppliers-desc-list mt56">
+          <text class="title"> 峰值推力：</text>
+          <text class="content blue">{{topForce}}</text>
+        </view>
+
+        <view class="suppliers-desc-list">
+          <text class="title">持续推力：</text>
+          <text class="content blue">{{durForce}}</text>
+        </view>
+
+    </view>
+</view>

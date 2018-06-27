@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="user-motto userinfo-bottom">欢迎  {{userInfo.nickName}} 了解电机性能</text><br/>
+
+  </view>
+  <image  class="info-img" src="{{penImg}}"
+  ></image>
+
+  <view class="userinfo">
+      <text class="user-motto">联系方式：宋先生  18681503726</text>
+  </view>
+ 
+</view>
