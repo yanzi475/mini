@@ -167,7 +167,7 @@ Page({
             accTime = (this.data.maxAcc/this.data.acceleration)/9.8
         }
         if(accTime){
-            accDis = 0.5 * this.data.acceleration * 9.8 * acceleration * 9.8* Math.pow(accTime,2) * 1000
+            accDis = 0.5 * this.data.acceleration * 9.8 * Math.pow(accTime,2) * 1000
         }
         // 减速
         if(this.data.evenAcc && this.data.deceleration) {
@@ -198,30 +198,30 @@ Page({
 
         //  匀速时总摩擦力
         if(this.data.weight && this.data.fuzai && this.data.elecWeight && this.data.forceLevel && this.data.forceHua && this.data.forceChen && this.data.forceLian ){
-            forceMax = (this.data.weight + this.data.fuzai + this.data.elecWeight *1000)* this.data.forceLevel + this.data.forceHua + this.data.forceChen + this.data.forceLian
+            forceMax = (+this.data.weight + (+this.data.fuzai) + (+this.data.elecWeight) *1000)* this.data.forceLevel + (+this.data.forceHua) + (+this.data.forceChen) + (+this.data.forceLian)
         }
         // forceMax = (this.data.weight + this.data.fuzai + this.data.elecWeight *1000)* this.data.forceLevel + this.data.forceHua + this.data.forceChen + this.data.forceLian
         //   运动总时间
         sumTime = accTime + delTime + aveTime
         if(this.data.weight && this.data.fuzai  && this.data.acceleration && forceMax) {
-            speedForce = (this.data.weight + this.data.fuzai) * this.data.acceleration *9.8 + forceMax
+            speedForce = ((+this.data.weight) + (+this.data.fuzai)) * (+this.data.acceleration) *9.8 + forceMax
         }
         if(this.data.weight && this.data.fuzai  && this.data.deceleration && forceMax) {
-            downForce = (this.data.weight + this.data.fuzai) * this.data.deceleration *9.8 - forceMax
+            downForce = ((+this.data.weight) + (+this.data.fuzai)) * (+this.data.deceleration) *9.8 - forceMax
         }
         if(speedForce && downForce) {
             maxForce = Math.max(speedForce, downForce)
         }
-        if(speedForce && accTime && forceMax && aveTime && downForce && delTime && this.data.parseTime ) {
-            let temp = Math.pow(speedForce, 2)* accTime + Math.pow(forceMax, 2)* aveTime + Math.pow(downForce, 2)* delTime + Math.pow(saveForce, 2)* this.data.parseTime
-            let x = temp / (accTime + aveTime + delTime + this.data.parseTime )
+        if(speedForce && accTime && forceMax && aveTime && downForce && delTime &&this.data.saveForce && this.data.parseTime ) {
+            let temp = Math.pow(speedForce, 2)* accTime + Math.pow(forceMax, 2)* aveTime + Math.pow(downForce, 2)* delTime + Math.pow((+this.data.saveForce), 2)* this.data.parseTime
+            let x = temp / (accTime + aveTime + delTime + (+this.data.parseTime) )
             durForceOne = Math.sqrt(x)
         }
         if(maxForce && this.data.saveLevel ) {
-            topForce = maxForce * this.data.saveLevel
+            topForce = maxForce * (+this.data.saveLevel)
         }
         if(durForceOne && this.data.saveLevel ) {
-            durForceTwo = durForceOne * this.data.saveLevel
+            durForceTwo = durForceOne * (+this.data.saveLevel)
         }
         this.setData(
             {
